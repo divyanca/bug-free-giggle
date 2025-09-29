@@ -35,6 +35,20 @@ def divide(a, b):
 
 # TODO: Students will add multiply, divide, power, sqrt functions
 
+def power(a, b):
+    """Raise a to the power of b with input validation."""
+    if not isinstance(a, (int, float)) or not isinstance(b, (int, float)):
+        raise TypeError("Both arguments must be numbers")
+    return a ** b
+
+def sqrt(x):
+    """Return the square root of x with input validation."""
+    if not isinstance(x, (int, float)):
+        raise TypeError("Argument must be a number")
+    if x < 0:
+        raise ValueError("Cannot take square root of negative number")
+    return x ** 0.5
+
 if __name__ == "__main__":
     print("🧮 Calculator Module")
     print(f"2 + 3 = {add(2, 3)}")
